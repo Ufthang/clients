@@ -1,0 +1,42 @@
+        <h2>Начальная страница</h2>
+        <div class="block">
+            <p>Поиск организации</p>
+            <form action="/index.php?page=def" method="post">
+                <table>
+                    <tr>
+                        <td>Название: </td>
+                        <td><input type="text" name="name" size="20"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" name="submit"></td>
+                        <td><input type="hidden" name="fID" value="id01"></td>
+                    </tr>
+                </table>                
+            </form>
+        </div>
+<?php if ($d):?>
+        <div class="block">
+            <table class="table">
+                <tr>
+                    <th>Название</th>
+                    <th>Адрес</th>
+                    <th>Аттестат</th>
+                    <th>Категория</th>
+                    <th>Дата получения</th>
+                    <th>Дата окончания</th>
+                    <th>Наличие вент.</th>
+                </tr>
+<?php foreach($d as $v):?>
+                <tr>
+                    <td><?=$v['name']?></td>
+                    <td><?=$v['adres']?></td>
+                    <td><?=$v['att']?></td>
+                    <td><?=$v['kat']?></td>
+                    <td><?=$v['date_get']?></td>
+                    <td><?=$v['date_end']?></td>
+                    <td><?=$v['Column1']?></td>
+                </tr>
+<?php endforeach;?>
+            </table>
+        </div>
+<?php endif;?>

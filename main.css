@@ -1,0 +1,30 @@
+@CHARSET "UTF-8";
+html {
+    font-family: monospace;
+    font-size: 12px;
+}
+body {
+    margin: auto;
+    padding: 0px;
+    width: 1000px;
+}
+input {
+    font-family: monospace;
+    font-size: 12px;
+}
+.block {
+    margin: 0px 0px 5px 0px;
+    padding: 5px;
+    border: solid 1px darkcyan;
+}
+.block p {
+    margin: 0px 0px 5px 0px;
+    padding: 0px;
+    font-weight: bold;
+}
+.table {
+    
+}
+.table tr {
+    border: solid 1px darkgreen;
+}
