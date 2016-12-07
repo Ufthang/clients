@@ -2,12 +2,6 @@
 include 'cfg.php';
 include 'data.php';
 
-$host       = '127.0.0.1';
-$username   = 'root';
-$passwd     = '';
-$dbname     = 'clients';
-
-$db = new mysqli($host, $username, $passwd, $dbname);
 $data = new data();
 
 $post = filter_input(INPUT_POST, 'submit');

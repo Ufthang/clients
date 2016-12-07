@@ -1,0 +1,41 @@
+<?php
+$v = $p['org'];
+$desc = $p['desc'];
+?>
+        <h2>Организация <?=$v['name']?></h2>
+        <p><a href="/">На главную</a></p>
+        <p><b>Адрес:</b> <?=$v['adres']?></p>
+        <p><b>Аттестат:</b> <?=$v['att']?></p>
+        <p><b>Категория:</b> <?=$v['kat']?></p>
+        <p><b>Дата получения:</b> <?=$v['date_get']?></p>
+        <p><b>Дата окончания:</b> <?=$v['date_end']?></p>
+        <p><b>Наличие вент.:</b> <?=$v['Column1']?></p>
+        <div class="block">
+            <p>Добавление события</p>
+            <form>
+                <table>
+                    <tr>
+                        <td>Дата события: </td>
+                        <td><input type="text" name="date_add" size="20"></td>
+                    </tr>
+                    <tr>
+                        <td>Описание:</td>
+                        <td><textarea name="description" rows="3" cols="40"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" name="submit"></td>
+                        <td>
+                            <input type="hidden" name="fID" value="id02">
+                            <input type="hidden" name="org_id" value="<?=$v['org_id']?>">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="block">
+            <p>Список событий</p>
+<?php if($desc):?>
+<?php else:?>
+            Нет событий!
+<?php endif;?>
+        </div>

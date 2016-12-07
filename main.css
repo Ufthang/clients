@@ -12,6 +12,10 @@ input {
     font-family: monospace;
     font-size: 12px;
 }
+p {
+    margin: 0px 0px 5px 0px;
+    padding: 0px;    
+}
 .block {
     margin: 0px 0px 5px 0px;
     padding: 5px;
