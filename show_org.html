@@ -1,6 +1,7 @@
 <?php
 $v = $p['org'];
 $desc = $p['desc'];
+$cont = $p['cont'];
 ?>
         <h2>Организация <?=$v['name']?></h2>
         <p><a href="/">На главную</a></p>
@@ -12,11 +13,11 @@ $desc = $p['desc'];
         <p><b>Наличие вент.:</b> <?=$v['Column1']?></p>
         <div class="block">
             <p>Добавление события</p>
-            <form>
+            <form method="post" action="/index.php">
                 <table>
                     <tr>
                         <td>Дата события: </td>
-                        <td><input type="text" name="date_add" size="20"></td>
+                        <td><input type="text" name="date_add" size="20" value="<?=$p['data']?>"></td>
                     </tr>
                     <tr>
                         <td>Описание:</td>
@@ -33,7 +34,17 @@ $desc = $p['desc'];
             </form>
         </div>
         <div class="block">
-            <p>Список событий</p>
+            <p>Список контактов <a href="?page=add_cont&id=<?=$v['org_id']?>">+add</a></p>
+<?php if($cont):?>
+<?php foreach($cont as $v):?>
+            <div><?php if($v['department']):?><b><?=$v['department']?>: </b><?php endif;?> <?php if($v['position']):?><?=$v['position']?>:<?php endif;?> <?php if($v['name']):?><?=$v['name']?>,<?php endif;?> <?=$v['phone_number']?></div>
+<?php endforeach;?>
+<?php else:?>
+            Нет контактов!
+<?php endif;?>
+        </div>
+        <div class="block">
+            <p>Список событий <a href="">+add</a></p>
 <?php if($desc):?>
 <?php else:?>
             Нет событий!

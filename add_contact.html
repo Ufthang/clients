@@ -1,0 +1,30 @@
+<?php $v = $p['name'];?>
+        <h2>Добавление нового контакта к организации <?=$v['name']?></h2>
+        <div>
+            <form method="post" action="?page=show&id=<?=$p['id']?>">
+                <table>
+                    <tr>
+                        <td>Дата добавления: </td><td><input type="text" name="date" size="20" value="<?=$p['data']?>"></td>
+                    </tr>
+                    <tr>
+                        <td>Отдел: </td><td><input type="text" name="department" size="100" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>Должность: </td><td><input type="text" name="position" size="100" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>ФИО: </td><td><input type="text" name="name" size="100" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>Контакты: </td><td><input type="text" name="phone_number" size="100" value=""></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" name="submit"></td>
+                        <td>
+                            <input type="hidden" name="fID" value="id03">
+                            <input type="hidden" name="org_id" value="<?=$p['id']?>">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
